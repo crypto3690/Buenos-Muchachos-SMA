@@ -852,7 +852,7 @@
     <section class="hero" id="inicio">
       <div class="container hero-inner">
         <div class="logo-space reveal" aria-label="Espacio para logo de Buenos Muchachos">
-          <div class="cap">♛</div>
+          <div class="cap">../Assets/Buenos-Muchachos-SMA-Logo.jpeg</div>
           <small>SMA</small>
         </div>
 
