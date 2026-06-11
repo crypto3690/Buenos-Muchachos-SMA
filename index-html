@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Buenos Muchachos | Barbería Premium en San Miguel de Allende</title>
+  <meta name="description" content="Reserva tu cita en Buenos Muchachos, barbería premium en San Miguel de Allende. Cortes, afeitados y arreglo personal con atención profesional." />
+
+  <style>
+    :root {
+      --black: #050505;
+      --charcoal: #111111;
+      --gold: #C9972B;
+      --gold-light: #D6AF4A;
+      --gold-dark: #8A641C;
+      --warm-white: #F5F0E6;
+      --gray: #B8B8B8;
+      --border: rgba(201, 151, 43, 0.28);
+      --border-strong: rgba(201, 151, 43, 0.55);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(201, 151, 43, 0.08), transparent 30%),
+        radial-gradient(circle at 80% 0%, rgba(214, 175, 74, 0.06), transparent 28%),
+        linear-gradient(180deg, var(--black) 0%, #070707 45%, var(--charcoal) 100%);
+      color: var(--warm-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        radial-gradient(circle, rgba(201,151,43,0.18) 1px, transparent 1.5px);
+      background-size: 80px 80px, 80px 80px, 26px 26px;
+      mix-blend-mode: screen;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.08;
+      background:
+        repeating-linear-gradient(
+          110deg,
+          rgba(214, 175, 74, 0.05) 0px,
+          rgba(214, 175, 74, 0.05) 1px,
+          transparent 1px,
+          transparent 12px
+        );
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .eyebrow::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 92px);
+      max-width: 980px;
+      margin: 0 auto 22px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.5vw, 62px);
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--gray);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+    }
+
+    .gold-text {
+      color: var(--gold-light);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      color: #080808;
+      border: 1px solid var(--gold-light);
+      box-shadow: 0 18px 42px rgba(201, 151, 43, 0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 56px rgba(201, 151, 43, 0.32);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--warm-white);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-strong);
+      background: rgba(201, 151, 43, 0.08);
+    }
+
+    .btn-small {
+      min-height: 42px;
+      padding: 0 18px;
+      font-size: 11px;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 54px;
+    }
+
+    .section-header.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 5, 5, 0.78);
+      border-bottom: 1px solid rgba(201, 151, 43, 0.18);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 25%, rgba(214, 175, 74, 0.35), transparent 32%),
+        linear-gradient(145deg, rgba(201, 151, 43, 0.14), rgba(0,0,0,0.2));
+      color: var(--gold-light);
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: inset 0 0 30px rgba(201,151,43,0.08);
+    }
+
+    .brand-copy strong {
+      display: block;
+      color: var(--warm-white);
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-copy span {
+      display: block;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--warm-white);
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 92px 0;
+      border-bottom: 1px solid rgba(201,151,43,0.16);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.78) 45%, rgba(5,5,5,0.95) 100%),
+        radial-gradient(circle at 50% 20%, rgba(201, 151, 43, 0.16), transparent 42%);
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 640px;
+      height: 640px;
+      right: -240px;
+      top: 12%;
+      border: 1px solid rgba(201, 151, 43, 0.18);
+      border-radius: 50%;
+      box-shadow:
+        inset 0 0 80px rgba(201,151,43,0.05),
+        0 0 90px rgba(201,151,43,0.08);
+      z-index: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .logo-space {
+      width: 184px;
+      height: 184px;
+      margin: 0 auto 32px;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(214,175,74,0.24), transparent 34%),
+        linear-gradient(145deg, rgba(201,151,43,0.1), rgba(255,255,255,0.02));
+      box-shadow:
+        inset 0 0 45px rgba(201,151,43,0.08),
+        0 28px 90px rgba(0,0,0,0.55);
+      position: relative;
+    }
+
+    .logo-space::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(201,151,43,0.22);
+      border-radius: 50%;
+    }
+
+    .logo-space .cap {
+      font-size: 54px;
+      color: var(--gold-light);
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.45));
+    }
+
+    .logo-space small {
+      position: absolute;
+      bottom: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+
+    .trust-line {
+      margin-top: 24px;
+      color: var(--gold-light);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-divider {
+      width: min(600px, 80%);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 38px auto 0;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .benefit-card,
+    .service-card,
+    .info-card {
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015)),
+        radial-gradient(circle at 20% 0%, rgba(201,151,43,0.08), transparent 36%);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::before,
+    .service-card::before,
+    .info-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(214,175,74,0.12), transparent 30%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .benefit-card:hover::before,
+    .service-card:hover::before,
+    .info-card:hover::before {
+      opacity: 1;
+    }
+
+    .benefit-number {
+      color: var(--gold-light);
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.18em;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .benefit-card h3,
+    .service-card h3,
+    .info-card h3 {
+      color: var(--warm-white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-strong);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      font-size: 22px;
+      margin-bottom: 22px;
+      background: rgba(201,151,43,0.06);
+    }
+
+    .service-card p {
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .gold-panel {
+      border: 1px solid var(--border-strong);
+      border-radius: 28px;
+      padding: 42px;
+      background:
+        linear-gradient(145deg, rgba(201,151,43,0.14), rgba(255,255,255,0.02)),
+        radial-gradient(circle at 80% 20%, rgba(214,175,74,0.16), transparent 32%);
+      box-shadow: var(--shadow);
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+      margin: 26px 0 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--gray);
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(201,151,43,0.12);
+      color: var(--gold-light);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    .support-box {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 54px;
+      background:
+        linear-gradient(145deg, rgba(17,17,17,0.92), rgba(5,5,5,0.92)),
+        radial-gradient(circle at 50% 0%, rgba(201,151,43,0.12), transparent 42%);
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,151,43,0.34);
+      background: rgba(201,151,43,0.07);
+      color: var(--gold-light);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .map-placeholder {
+      min-height: 360px;
+      border-radius: 28px;
+      border: 1px dashed rgba(201,151,43,0.42);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)),
+        repeating-linear-gradient(45deg, rgba(201,151,43,0.05) 0 1px, transparent 1px 16px);
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: var(--gray);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .address {
+      font-size: 20px;
+      color: var(--warm-white);
+      margin: 18px 0 26px;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hour-card {
+      text-align: center;
+    }
+
+    .hour-card strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 120px 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201,151,43,0.18), transparent 38%),
+        linear-gradient(180deg, transparent, rgba(201,151,43,0.04));
+      border-top: 1px solid rgba(201,151,43,0.16);
+      border-bottom: 1px solid rgba(201,151,43,0.16);
+    }
+
+    .final-cta p {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      padding: 70px 0 34px;
+      background: #030303;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 34px;
+      padding-bottom: 42px;
+      border-bottom: 1px solid rgba(201,151,43,0.16);
+    }
+
+    .footer h3 {
+      color: var(--gold-light);
+      font-size: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .footer p,
+    .footer a {
+      color: var(--gray);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    .footer a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: rgba(245,240,230,0.55);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+    }
+
+    .floating-reserve {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 90;
+      display: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav.mobile-open .nav-links {
+        display: grid;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 86px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: rgba(5,5,5,0.96);
+        box-shadow: var(--shadow);
+        gap: 18px;
+      }
+
+      .benefit-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .split,
+      .location-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .hero {
+        padding: 68px 0;
+      }
+
+      .logo-space {
+        width: 142px;
+        height: 142px;
+      }
+
+      .logo-space .cap {
+        font-size: 42px;
+      }
+
+      .logo-space small {
+        bottom: 30px;
+        font-size: 9px;
+      }
+
+      .hero-actions,
+      .final-cta .hero-actions,
+      .location-grid .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .benefit-grid,
+      .services-grid,
+      .hours-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-card,
+      .service-card,
+      .info-card,
+      .gold-panel,
+      .support-box {
+        padding: 26px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .floating-reserve {
+        display: block;
+        left: 14px;
+        right: 14px;
+      }
+
+      .floating-reserve .btn {
+        box-shadow: 0 18px 46px rgba(201,151,43,0.35);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Buenos Muchachos">
+        <div class="brand-mark">BM</div>
+        <div class="brand-copy">
+          <strong>Buenos Muchachos</strong>
+          <span>Barberías SMA</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Menú principal">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#horario">Horario</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary btn-small" href="https://wa.me/524152168988" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="logo-space reveal" aria-label="Espacio para logo de Buenos Muchachos">
+          <div class="cap">♛</div>
+          <small>SMA</small>
+        </div>
+
+        <span class="eyebrow reveal">Buenos Muchachos</span>
+        <h1 class="reveal">Barbería premium en <span class="gold-text">San Miguel de Allende</span></h1>
+
+        <p class="reveal">
+          Cortes, afeitados y arreglo personal con estilo clásico, atención profesional y experiencia de barbería de alto nivel.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+            Reservar mi cita
+          </a>
+          <a class="btn btn-secondary" href="https://wa.me/524152168988" target="_blank" rel="noopener">
+            Preguntar por WhatsApp
+          </a>
+        </div>
+
+        <div class="trust-line reveal">Agenda en línea y asegura tu horario.</div>
+        <div class="hero-divider reveal"></div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Experiencia</span>
+          <h2>Una barbería para hombres que cuidan su imagen</h2>
+          <p>
+            En Buenos Muchachos combinamos técnica, estilo y atención personalizada para que cada visita se sienta precisa, cómoda y bien cuidada.
+          </p>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <span class="benefit-number">01</span>
+            <h3>Atención profesional</h3>
+            <p>Cada servicio se trabaja con cuidado, detalle y criterio para que salgas con una imagen limpia, segura y bien definida.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <span class="benefit-number">02</span>
+            <h3>Estilo clásico y premium</h3>
+            <p>Un ambiente masculino, elegante y sobrio, pensado para quienes valoran la barbería bien hecha.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <span class="benefit-number">03</span>
+            <h3>Reserva fácil en línea</h3>
+            <p>Elige tu servicio, selecciona horario disponible y asegura tu cita sin vueltas ni esperas innecesarias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Servicios</span>
+          <h2>Servicios de barbería con carácter</h2>
+          <p>
+            Estructura editable para integrar el catálogo real. Todos los servicios pueden reservarse directamente en línea.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">✂</div>
+              <h3>Corte clásico</h3>
+              <p>Corte limpio, preciso y bien definido para mantener una imagen cuidada todos los días.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">◆</div>
+              <h3>Corte premium</h3>
+              <p>Servicio más detallado para quienes buscan acabado superior, estilo y atención personalizada.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">♨</div>
+              <h3>Afeitado tradicional</h3>
+              <p>Afeitado clásico con técnica cuidadosa para una sensación limpia, fresca y elegante.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">⌁</div>
+              <h3>Arreglo de barba</h3>
+              <p>Perfilado, forma y detalle para que la barba mantenga presencia, proporción y estilo.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">✦</div>
+              <h3>Corte + barba</h3>
+              <p>Combinación completa para renovar tu imagen con un acabado uniforme y profesional.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon">♛</div>
+              <h3>Experiencia completa Buenos Muchachos</h3>
+              <p>Una experiencia integral de arreglo personal para verte bien y salir listo para cualquier ocasión.</p>
+            </div>
+            <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">Reservar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reservas">
+      <div class="container split">
+        <div class="section-header reveal">
+          <span class="eyebrow">Reserva directa</span>
+          <h2>Reserva directo y asegura tu lugar</h2>
+          <p>
+            Para ofrecerte una mejor atención, todas las citas se registran desde nuestro sistema de reservas. Así podemos confirmar horarios, servicios y disponibilidad de forma ordenada.
+          </p>
+        </div>
+
+        <div class="gold-panel reveal">
+          <h3>Tu cita queda organizada desde el inicio</h3>
+          <ul class="check-list">
+            <li>Eliges servicio y horario disponible</li>
+            <li>Tu cita queda registrada</li>
+            <li>Evitas esperas innecesarias</li>
+            <li>Nos ayudas a darte una atención más organizada</li>
+          </ul>
+          <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+            Agendar ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="whatsapp">
+      <div class="container">
+        <div class="support-box reveal">
+          <span class="eyebrow">Orientación</span>
+          <h2>¿No sabes qué servicio elegir?</h2>
+          <p>
+            Escríbenos por WhatsApp y te orientamos. Si ya sabes qué servicio necesitas, lo mejor es reservar directo en línea.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="https://wa.me/524152168988" target="_blank" rel="noopener">
+              Hablar por WhatsApp
+            </a>
+          </div>
+
+          <div class="notice">
+            WhatsApp es para dudas y orientación. Las citas se registran desde la página de reservas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="container location-grid">
+        <div class="info-card reveal">
+          <span class="eyebrow">Ubicación</span>
+          <h2>Buenos Muchachos</h2>
+          <p class="address">
+            Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.
+          </p>
+
+          <div class="hero-actions" style="justify-content:flex-start;">
+            <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+              Reservar antes de llegar
+            </a>
+            <a class="btn btn-secondary" href="https://wa.me/524152168988" target="_blank" rel="noopener">
+              Preguntar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="map-placeholder reveal">
+          <div>
+            <h3 style="color: var(--gold-light); margin-bottom: 10px;">Espacio para mapa</h3>
+            <p>Aquí puedes integrar después el iframe de Google Maps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="horario">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="eyebrow">Horario</span>
+          <h2>Agenda tu visita con tiempo</h2>
+          <p>Consulta disponibilidad desde el sistema de reservas antes de llegar.</p>
+        </div>
+
+        <div class="hours-grid">
+          <article class="info-card hour-card reveal">
+            <strong>Lunes a sábado</strong>
+            <p>9:00 a.m. – 7:00 p.m.</p>
+          </article>
+
+          <article class="info-card hour-card reveal">
+            <strong>Domingo</strong>
+            <p>Cerrado o sujeto a disponibilidad. Editable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container reveal">
+        <span class="eyebrow">Agenda hoy</span>
+        <h2>Tu próximo corte empieza con una cita</h2>
+        <p>
+          Agenda en línea, elige tu horario y vive la experiencia Buenos Muchachos.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+            Reservar mi cita
+          </a>
+          <a class="btn btn-secondary" href="https://wa.me/524152168988" target="_blank" rel="noopener">
+            Resolver dudas por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Buenos Muchachos</h3>
+          <p>Barbería premium en San Miguel de Allende.</p>
+          <br />
+          <a class="btn btn-primary btn-small" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+            Reservar cita
+          </a>
+        </div>
+
+        <div>
+          <h3>Dirección</h3>
+          <p>Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.</p>
+        </div>
+
+        <div>
+          <h3>Contacto</h3>
+          <p>
+            WhatsApp:<br />
+            <a href="https://wa.me/524152168988" target="_blank" rel="noopener">+52 415 216 8988</a>
+          </p>
+          <br />
+          <p>
+            Email:<br />
+            <a href="mailto:buenosmuchachos.ofi@gmail.com">buenosmuchachos.ofi@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Buenos Muchachos. Todos los derechos reservados.</span>
+        <span>Barbería premium en San Miguel de Allende.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-reserve">
+    <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" target="_blank" rel="noopener">
+      Reservar mi cita
+    </a>
+  </div>
+
+  <script>
+    const nav = document.getElementById("nav");
+    const menuToggle = document.getElementById("menuToggle");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("mobile-open");
+      menuToggle.textContent = nav.classList.contains("mobile-open") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("mobile-open");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+</html>
