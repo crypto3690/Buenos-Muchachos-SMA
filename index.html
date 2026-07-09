@@ -10,6 +10,7 @@
   <meta name="keywords" content="barbería premium en San Miguel de Allende, barbería en San Miguel de Allende, corte premium San Miguel de Allende, afeitado tradicional San Miguel de Allende, facial masculino San Miguel de Allende, barbería Zona Centro San Miguel de Allende, barbershop San Miguel de Allende, men’s haircut San Miguel de Allende, traditional shave San Miguel de Allende" />
   <meta name="author" content="Buenos Muchachos Barberías SMA" />
   <meta name="robots" content="index, follow" />
+
   <link rel="canonical" href="https://www.buenosmuchachossma.com/" />
 
   <meta property="og:type" content="business.business" />
@@ -31,19 +32,19 @@
     :root {
       --black: #0E0E0E;
       --carbon: #151515;
-      --carbon-2: #1D1D1D;
+      --carbon-soft: #1D1D1D;
       --gold: #C8A45D;
       --gold-soft: rgba(200, 164, 93, 0.16);
       --warm-white: #F5F1E8;
       --gray: #B8B8B8;
-      --gray-2: #D6D0C3;
+      --gray-light: #D6D0C3;
       --leather: #4A3326;
       --green: #25D366;
       --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
       --radius-lg: 28px;
       --radius-md: 20px;
       --max: 1180px;
-      --header-height: 82px;
+      --header-height: 112px;
     }
 
     * {
@@ -95,6 +96,7 @@
       border-radius: 999px;
       z-index: 9999;
       font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .skip-link:focus {
@@ -165,14 +167,14 @@
     }
 
     p {
-      color: var(--gray-2);
+      color: var(--gray-light);
       font-size: 1.02rem;
     }
 
     .lead {
       max-width: 760px;
       font-size: clamp(1.08rem, 2vw, 1.28rem);
-      color: var(--gray-2);
+      color: var(--gray-light);
       margin-bottom: 28px;
     }
 
@@ -180,11 +182,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      height: var(--header-height);
+      min-height: var(--header-height);
       display: flex;
       align-items: center;
       backdrop-filter: blur(18px);
-      background: rgba(14, 14, 14, 0.78);
+      background: rgba(14, 14, 14, 0.88);
       border-bottom: 1px solid rgba(245, 241, 232, 0.08);
     }
 
@@ -193,20 +195,26 @@
       align-items: center;
       justify-content: space-between;
       gap: 22px;
+      min-height: var(--header-height);
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      min-width: fit-content;
+      justify-content: flex-start;
+      height: var(--header-height);
+      width: 150px;
+      min-width: 120px;
+      overflow: hidden;
     }
 
     .brand-logo {
-      width: 158px;
-      height: auto;
       display: block;
+      width: auto;
+      max-width: 135px;
+      max-height: 98px;
       object-fit: contain;
+      object-position: left center;
     }
 
     .main-nav {
@@ -214,8 +222,9 @@
       align-items: center;
       gap: 22px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.88rem;
-      color: var(--gray-2);
+      font-size: 0.9rem;
+      color: var(--gray-light);
+      white-space: nowrap;
     }
 
     .main-nav a {
@@ -233,24 +242,10 @@
       gap: 10px;
     }
 
-    .language-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(245, 241, 232, 0.14);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--warm-white);
-      cursor: pointer;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
-    }
-
     .menu-toggle {
       display: none;
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 999px;
       border: 1px solid rgba(245, 241, 232, 0.14);
       background: rgba(255, 255, 255, 0.04);
@@ -536,6 +531,20 @@
       font-size: 0.9rem;
     }
 
+    .business-summary {
+      padding: 42px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .business-summary h2 {
+      max-width: 820px;
+    }
+
+    .business-summary p {
+      max-width: 860px;
+    }
+
     .info-list {
       display: grid;
       gap: 14px;
@@ -549,7 +558,7 @@
       display: flex;
       gap: 12px;
       align-items: flex-start;
-      color: var(--gray-2);
+      color: var(--gray-light);
       padding: 14px 0;
       border-bottom: 1px solid rgba(245, 241, 232, 0.08);
     }
@@ -564,20 +573,6 @@
       color: var(--gold);
       flex: 0 0 auto;
       margin-top: 2px;
-    }
-
-    .ai-box {
-      padding: 34px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .ai-box article {
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(245, 241, 232, 0.1);
-      background: rgba(255, 255, 255, 0.035);
     }
 
     .grid {
@@ -754,7 +749,7 @@
       gap: 9px;
       margin: 16px 0 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--gray-2);
+      color: var(--gray-light);
       font-size: 0.92rem;
     }
 
@@ -764,7 +759,7 @@
 
     .quote {
       margin: 18px 0 22px;
-      color: var(--gray-2);
+      color: var(--gray-light);
       font-style: italic;
       border-left: 2px solid var(--gold);
       padding-left: 14px;
@@ -898,7 +893,7 @@
 
     .faq-answer {
       padding: 0 22px 22px;
-      color: var(--gray-2);
+      color: var(--gray-light);
     }
 
     .final-cta {
@@ -940,7 +935,7 @@
       display: grid;
       gap: 10px;
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--gray-2);
+      color: var(--gray-light);
       font-size: 0.92rem;
     }
 
@@ -998,43 +993,24 @@
       outline-offset: 4px;
     }
 
-    @media (max-width: 1100px) {
-      .main-nav {
-        gap: 14px;
-        font-size: 0.82rem;
-      }
-
-      .grid-4 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero-grid,
-      .location-grid,
-      .local-panel,
-      .ai-box {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        min-height: 480px;
-      }
-
-      .map-wrap iframe {
-        min-height: 380px;
-      }
-    }
-
-    @media (max-width: 860px) {
+    @media (max-width: 1180px) {
       :root {
-        --header-height: 74px;
+        --header-height: 94px;
       }
 
       .container {
         width: min(100% - 28px, var(--max));
       }
 
+      .brand {
+        width: 118px;
+        min-width: 98px;
+        height: var(--header-height);
+      }
+
       .brand-logo {
-        width: 132px;
+        max-width: 98px;
+        max-height: 82px;
       }
 
       .menu-toggle {
@@ -1070,8 +1046,32 @@
         display: none;
       }
 
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-grid,
+      .location-grid,
+      .local-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 480px;
+      }
+
+      .map-wrap iframe {
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 860px) {
       .section {
         padding: 72px 0;
+      }
+
+      .section.compact {
+        padding: 60px 0;
       }
 
       .hero {
@@ -1100,8 +1100,8 @@
       }
 
       .local-panel,
-      .ai-box {
-        padding: 22px;
+      .business-summary {
+        padding: 24px;
       }
 
       .gallery-item {
@@ -1131,8 +1131,18 @@
     }
 
     @media (max-width: 560px) {
+      :root {
+        --header-height: 84px;
+      }
+
+      .brand {
+        width: 92px;
+        min-width: 82px;
+      }
+
       .brand-logo {
-        width: 118px;
+        max-width: 82px;
+        max-height: 72px;
       }
 
       h1 {
@@ -1191,6 +1201,11 @@
       "postalCode": "37700",
       "addressCountry": "MX"
     },
+    "areaServed": [
+      "San Miguel de Allende",
+      "Zona Centro San Miguel de Allende",
+      "Guanajuato"
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -1349,22 +1364,22 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido principal</a>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
   <header class="site-header" aria-label="Navegación principal">
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="Buenos Muchachos Barberías SMA">
-        <!-- LOGO: coloca tu archivo en /assets/logo.png o cambia esta ruta -->
-        <img class="brand-logo" src="Assets/logo BM.png" alt="Buenos Muchachos Barberías SMA" />
+        <!-- LOGO: coloca tu archivo en assets/logo.png o cambia esta ruta -->
+        <img class="brand-logo" src="Assets/Buenos-Muchachos-SMA-Logo.jpeg" alt="Buenos Muchachos Barberías SMA" />
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Secciones de la landing page">
-        <a href="#servicios" data-i18n="navServices">Servicios</a>
-        <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
-        <a href="#barberos" data-i18n="navBarbers">Barberos</a>
-        <a href="#resenas" data-i18n="navReviews">Reseñas</a>
-        <a href="#ubicacion" data-i18n="navLocation">Ubicación</a>
-        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#barberos">Barberos</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
@@ -1373,12 +1388,8 @@
             <path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M8 13h3M8 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <span data-i18n="reserveNow">Reservar ahora</span>
+          <span>Reservar ahora</span>
         </a>
-
-        <button class="language-toggle" type="button" id="languageToggle" aria-label="Cambiar idioma a inglés">
-          <span id="languageLabel">ES / EN</span>
-        </button>
 
         <button class="menu-toggle" type="button" id="menuToggle" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">
           <span aria-hidden="true"></span>
@@ -1393,9 +1404,9 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow" data-i18n="heroEyebrow">Barbería premium en San Miguel de Allende</span>
-          <h1 id="hero-title" data-i18n="heroTitle">Barbería premium en San Miguel de Allende para hombres que cuidan su imagen.</h1>
-          <p class="lead" data-i18n="heroSubtitle">Corte premium, afeitado tradicional, facial masculino y paquetes de cuidado personal en una experiencia cálida, precisa y profesional.</p>
+          <span class="eyebrow">Barbería premium en San Miguel de Allende</span>
+          <h1 id="hero-title">Barbería premium en San Miguel de Allende para hombres que cuidan su imagen.</h1>
+          <p class="lead">Corte premium, afeitado tradicional, facial masculino y paquetes de cuidado personal en una experiencia cálida, precisa y profesional.</p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar mi cita ahora">
@@ -1403,7 +1414,7 @@
                 <path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M8 13h3M8 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
-              <span data-i18n="heroCta">Reservar mi cita ahora</span>
+              <span>Reservar mi cita ahora</span>
             </a>
 
             <a class="btn btn-whatsapp" href="https://wa.me/524152168988?text=Hola%20Buenos%20Muchachos%2C%20quiero%20informaci%C3%B3n%20para%20reservar%20una%20cita." aria-label="Tengo una duda por WhatsApp" target="_blank" rel="noopener">
@@ -1411,24 +1422,24 @@
                 <path d="M20.5 11.8a8.4 8.4 0 0 1-12.46 7.34L4 20.25l1.16-3.93A8.4 8.4 0 1 1 20.5 11.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
                 <path d="M9.2 7.7c-.2-.45-.42-.46-.61-.47h-.53c-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24s.96 2.6 1.1 2.78c.13.18 1.86 2.98 4.6 4.06 2.28.9 2.75.72 3.24.68.5-.05 1.6-.65 1.82-1.28.22-.63.22-1.17.15-1.28-.06-.12-.24-.18-.5-.31-.27-.14-1.6-.8-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.72-1.35-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.48-.84-2.03Z" fill="currentColor"/>
               </svg>
-              <span data-i18n="heroWhatsapp">Tengo una duda por WhatsApp</span>
+              <span>Tengo una duda por WhatsApp</span>
             </a>
           </div>
 
-          <p class="microcopy" data-i18n="heroMicrocopy">Reserva en línea en menos de 1 minuto.</p>
+          <p class="microcopy">Reserva en línea en menos de 1 minuto.</p>
 
           <div class="stats-strip" aria-label="Datos principales">
             <div class="stat">
               <strong>7</strong>
-              <span data-i18n="statServices">servicios principales</span>
+              <span>servicios principales</span>
             </div>
             <div class="stat">
               <strong>Zona Centro</strong>
-              <span data-i18n="statLocation">San Miguel de Allende</span>
+              <span>San Miguel de Allende</span>
             </div>
             <div class="stat">
               <strong>$290–$1,100</strong>
-              <span data-i18n="statPrices">rango de servicios MXN</span>
+              <span>rango de servicios MXN</span>
             </div>
           </div>
         </div>
@@ -1436,11 +1447,11 @@
         <aside class="hero-card" aria-label="Imagen principal de barbería premium">
           <!-- Reemplazar por imagen real principal de la barbería -->
           <div class="hero-image-placeholder" role="img" aria-label="Placeholder de imagen premium de barbería">
-            <span data-i18n="heroImagePlaceholder">Reemplazar por fotografía real de corte, barbería o ritual masculino</span>
+            <span>Reemplazar por fotografía real de corte, barbería o ritual masculino</span>
           </div>
           <div class="hero-badge">
-            <strong data-i18n="heroBadgeTitle">Tu imagen no se improvisa.</strong>
-            <span data-i18n="heroBadgeText">Reserva tu horario y llega listo.</span>
+            <strong>Tu imagen no se improvisa.</strong>
+            <span>Reserva tu horario y llega listo.</span>
           </div>
         </aside>
       </div>
@@ -1451,13 +1462,13 @@
         <div class="local-panel panel">
           <div class="local-visual" role="img" aria-label="Placeholder de fachada o interior de Buenos Muchachos">
             <!-- Reemplazar por foto real de fachada o interior -->
-            <span data-i18n="localImagePlaceholder">Imagen local / fachada / interior</span>
+            <span>Imagen local / fachada / interior</span>
           </div>
 
           <div>
-            <span class="eyebrow" data-i18n="localEyebrow">Autoridad local</span>
-            <h2 id="local-title" data-i18n="localTitle">Una barbería premium en el corazón de San Miguel de Allende.</h2>
-            <p data-i18n="localText">Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro. Somos un espacio de cuidado masculino creado por barberos sanmiguelenses para hombres que valoran imagen, presencia, técnica y experiencia.</p>
+            <span class="eyebrow">Autoridad local</span>
+            <h2 id="local-title">Una barbería premium en el corazón de San Miguel de Allende.</h2>
+            <p>Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro. Somos un espacio de cuidado masculino creado por barberos sanmiguelenses para hombres que valoran imagen, presencia, técnica y experiencia.</p>
 
             <ul class="info-list" aria-label="Información de contacto">
               <li>
@@ -1477,7 +1488,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
                   <path d="M8 2v4M16 2v4M4 9h16M6 5h12a2 2 0 0 1 2 2v11a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-                <span data-i18n="hoursShort">Lunes a sábado 9:00 a.m. – 7:00 p.m. | Domingo 9:00 a.m. – 3:00 p.m.</span>
+                <span>Lunes a sábado 9:00 a.m. – 7:00 p.m. | Domingo 9:00 a.m. – 3:00 p.m.</span>
               </li>
             </ul>
           </div>
@@ -1485,19 +1496,13 @@
       </div>
     </section>
 
-    <section class="section compact" aria-labelledby="ai-title">
+    <section class="section compact" id="que-es" aria-labelledby="business-title">
       <div class="container">
-        <div class="ai-box panel">
+        <div class="panel business-summary">
           <article>
-            <span class="eyebrow">AEO / IA</span>
-            <h2 id="ai-title" data-i18n="aiTitleEs">¿Qué es Buenos Muchachos Barberías SMA?</h2>
-            <p data-i18n="aiTextEs">Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. Ofrece corte premium, corte regular, corte infantil, afeitado tradicional, afeitado express, facial premium y paquetes de cuidado masculino. Su propuesta combina técnica profesional, ambiente masculino, atención cercana y una experiencia de barbería cuidada para clientes locales y visitantes.</p>
-          </article>
-
-          <article lang="en">
-            <span class="eyebrow">AI / Search</span>
-            <h2 data-i18n="aiTitleEn">What is Buenos Muchachos Barberías SMA?</h2>
-            <p data-i18n="aiTextEn">Buenos Muchachos Barberías SMA is a premium barbershop located at Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. It offers premium haircuts, regular haircuts, kids haircuts, traditional shaves, express shaves, premium men’s facials and grooming packages. Its proposal combines professional technique, a masculine atmosphere, personal attention and a refined barbershop experience for locals and visitors.</p>
+            <h2 id="business-title">¿Qué es Buenos Muchachos Barberías SMA?</h2>
+            <p>Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. Ofrece corte premium, corte regular, corte infantil, afeitado tradicional, afeitado express, facial premium y paquetes de cuidado masculino.</p>
+            <p>Su propuesta combina técnica profesional, ambiente masculino, atención cercana y una experiencia de barbería cuidada para clientes locales y visitantes.</p>
           </article>
         </div>
       </div>
@@ -1506,9 +1511,9 @@
     <section class="section" id="beneficios" aria-labelledby="benefits-title">
       <div class="container">
         <div class="section-header center">
-          <span class="eyebrow" data-i18n="benefitsEyebrow">Beneficios</span>
-          <h2 id="benefits-title" data-i18n="benefitsTitle">Más que un corte. Una experiencia completa.</h2>
-          <p data-i18n="benefitsSubtitle">Cada servicio está diseñado para cuidar tu imagen, tu presencia y tu experiencia desde que llegas hasta que sales.</p>
+          <span class="eyebrow">Beneficios</span>
+          <h2 id="benefits-title">Más que un corte. Una experiencia completa.</h2>
+          <p>Cada servicio está diseñado para cuidar tu imagen, tu presencia y tu experiencia desde que llegas hasta que sales.</p>
         </div>
 
         <div class="grid grid-3">
@@ -1516,48 +1521,48 @@
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 12l8 4 8-4M4 17l8 4 8-4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             </span>
-            <h3 data-i18n="benefit1Title">Imagen limpia, cuidada y profesional.</h3>
-            <p data-i18n="benefit1Text">Servicios pensados para hombres que quieren verse bien con intención y consistencia.</p>
+            <h3>Imagen limpia, cuidada y profesional.</h3>
+            <p>Servicios pensados para hombres que quieren verse bien con intención y consistencia.</p>
           </article>
 
           <article class="card">
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 20 20 4M14 4h6v6M6 14l4 4M4 10l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <h3 data-i18n="benefit2Title">Técnica de barbería con atención al detalle.</h3>
-            <p data-i18n="benefit2Text">La diferencia está en el acabado, la limpieza del servicio y la precisión del resultado.</p>
+            <h3>Técnica de barbería con atención al detalle.</h3>
+            <p>La diferencia está en el acabado, la limpieza del servicio y la precisión del resultado.</p>
           </article>
 
           <article class="card">
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12v18H6V3ZM9 7h6M9 11h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
-            <h3 data-i18n="benefit3Title">Corte, barba, facial y paquetes en un solo lugar.</h3>
-            <p data-i18n="benefit3Text">Elige un servicio puntual o una experiencia completa de cuidado masculino.</p>
+            <h3>Corte, barba, facial y paquetes en un solo lugar.</h3>
+            <p>Elige un servicio puntual o una experiencia completa de cuidado masculino.</p>
           </article>
 
           <article class="card">
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0-9-9c0 1.6.42 3.1 1.15 4.4L3 21l4.77-1.1A8.93 8.93 0 0 0 12 21Z" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M8 9h5M8 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
-            <h3 data-i18n="benefit4Title">Ambiente masculino, elegante y relajado.</h3>
-            <p data-i18n="benefit4Text">Una experiencia cálida, sobria y profesional, sin presión ni saturación.</p>
+            <h3>Ambiente masculino, elegante y relajado.</h3>
+            <p>Una experiencia cálida, sobria y profesional, sin presión ni saturación.</p>
           </article>
 
           <article class="card">
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
-            <h3 data-i18n="benefit5Title">Reserva en línea para asegurar tu horario.</h3>
-            <p data-i18n="benefit5Text">Agenda fácil, llega a tiempo y permite que tu servicio quede registrado correctamente.</p>
+            <h3>Reserva en línea para asegurar tu horario.</h3>
+            <p>Agenda fácil, llega a tiempo y permite que tu servicio quede registrado correctamente.</p>
           </article>
 
           <article class="card">
             <span class="icon-chip" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><path d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" stroke-width="2"/></svg>
             </span>
-            <h3 data-i18n="benefit6Title">Ubicación céntrica en San Miguel de Allende.</h3>
-            <p data-i18n="benefit6Text">Estamos en Zona Centro, cerca de la vida local, hoteles, galerías y recorridos del corazón de San Miguel.</p>
+            <h3>Ubicación céntrica en San Miguel de Allende.</h3>
+            <p>Estamos en Zona Centro, cerca de la vida local, hoteles, galerías y recorridos del corazón de San Miguel.</p>
           </article>
         </div>
       </div>
@@ -1566,100 +1571,100 @@
     <section class="section" id="servicios" aria-labelledby="services-title">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow" data-i18n="servicesEyebrow">Servicios</span>
-          <h2 id="services-title" data-i18n="servicesTitle">Servicios de barbería premium.</h2>
-          <p data-i18n="servicesSubtitle">Elige tu servicio y reserva directamente en línea para asegurar tu horario.</p>
+          <span class="eyebrow">Servicios</span>
+          <h2 id="services-title">Servicios de barbería premium.</h2>
+          <p>Elige tu servicio y reserva directamente en línea para asegurar tu horario.</p>
         </div>
 
         <div class="grid grid-3">
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service1Name">Corte Premium</h3>
+              <h3>Corte Premium</h3>
               <span class="price">$490 MXN</span>
             </div>
-            <p data-i18n="service1Desc">Ritual de corte masculino con lavado, masaje y acabado de alta precisión.</p>
-            <p class="benefit" data-i18n="service1Benefit">Beneficio: presencia más cuidada, acabado preciso y experiencia completa.</p>
+            <p>Ritual de corte masculino con lavado, masaje y acabado de alta precisión.</p>
+            <p class="benefit">Beneficio: presencia más cuidada, acabado preciso y experiencia completa.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Corte Premium">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service2Name">Corte Regular</h3>
+              <h3>Corte Regular</h3>
               <span class="price">$390 MXN</span>
             </div>
-            <p data-i18n="service2Desc">Corte clásico con técnica profesional y terminación impecable.</p>
-            <p class="benefit" data-i18n="service2Benefit">Beneficio: verte bien de forma práctica, confiable y sin complicaciones.</p>
+            <p>Corte clásico con técnica profesional y terminación impecable.</p>
+            <p class="benefit">Beneficio: verte bien de forma práctica, confiable y sin complicaciones.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Corte Regular">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service3Name">Corte Infantil</h3>
+              <h3>Corte Infantil</h3>
               <span class="price">$290 MXN</span>
             </div>
-            <p data-i18n="service3Desc">Corte para niños con trato cuidadoso, paciente y profesional.</p>
-            <p class="benefit" data-i18n="service3Benefit">Beneficio: una experiencia tranquila, amable y bien cuidada para niños.</p>
+            <p>Corte para niños con trato cuidadoso, paciente y profesional.</p>
+            <p class="benefit">Beneficio: una experiencia tranquila, amable y bien cuidada para niños.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Corte Infantil">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service4Name">Afeitado Tradicional</h3>
+              <h3>Afeitado Tradicional</h3>
               <span class="price">$490 MXN</span>
             </div>
-            <p data-i18n="service4Desc">Ritual de afeitado con navaja, espuma caliente, toallas calientes, aromaterapia y masaje.</p>
-            <p class="benefit" data-i18n="service4Benefit">Beneficio: barba limpia, piel cuidada y ritual clásico de barbería.</p>
+            <p>Ritual de afeitado con navaja, espuma caliente, toallas calientes, aromaterapia y masaje.</p>
+            <p class="benefit">Beneficio: barba limpia, piel cuidada y ritual clásico de barbería.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Afeitado Tradicional">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service5Name">Afeitado Express</h3>
+              <h3>Afeitado Express</h3>
               <span class="price">$340 MXN</span>
             </div>
-            <p data-i18n="service5Desc">Servicio práctico para limpieza y definición de barba con acabado profesional.</p>
-            <p class="benefit" data-i18n="service5Benefit">Beneficio: barba definida, presentación limpia y servicio eficiente.</p>
+            <p>Servicio práctico para limpieza y definición de barba con acabado profesional.</p>
+            <p class="benefit">Beneficio: barba definida, presentación limpia y servicio eficiente.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Afeitado Express">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service6Name">Facial Premium</h3>
+              <h3>Facial Premium</h3>
               <span class="price">$790 MXN</span>
             </div>
-            <p data-i18n="service6Desc">Limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.</p>
-            <p class="benefit" data-i18n="service6Benefit">Beneficio: rostro renovado, descanso y cuidado masculino completo.</p>
+            <p>Limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.</p>
+            <p class="benefit">Beneficio: rostro renovado, descanso y cuidado masculino completo.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar Facial Premium">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
 
           <article class="card service-card">
             <div class="service-top">
-              <h3 data-i18n="service7Name">Paquetes</h3>
+              <h3>Paquetes</h3>
               <span class="price">$590–$1,100 MXN</span>
             </div>
-            <p data-i18n="service7Desc">Paquetes Tradicional, Express y Premium para una experiencia más completa.</p>
-            <p class="benefit" data-i18n="service7Benefit">Beneficio: combina corte, barba, facial o ritual según lo que necesitas hoy.</p>
+            <p>Paquetes Tradicional, Express y Premium para una experiencia más completa.</p>
+            <p class="benefit">Beneficio: combina corte, barba, facial o ritual según lo que necesitas hoy.</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar paquete de barbería">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveService">Reservar servicio</span>
+              <span>Reservar servicio</span>
             </a>
           </article>
         </div>
@@ -1669,52 +1674,52 @@
     <section class="section" id="necesidades" aria-labelledby="needs-title">
       <div class="container">
         <div class="section-header center">
-          <span class="eyebrow" data-i18n="needsEyebrow">Elige mejor</span>
-          <h2 id="needs-title" data-i18n="needsTitle">Elige según lo que necesitas hoy</h2>
-          <p data-i18n="needsSubtitle">Agenda fácil. Llega. Relájate. Sal bien.</p>
+          <span class="eyebrow">Elige mejor</span>
+          <h2 id="needs-title">Elige según lo que necesitas hoy</h2>
+          <p>Agenda fácil. Llega. Relájate. Sal bien.</p>
         </div>
 
         <div class="grid grid-3">
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need1Title">Quiero verme más profesional</h3>
-            <span class="recommendation" data-i18n="need1Service">Corte Premium</span>
-            <p data-i18n="need1Text">Para hombres que buscan presencia, control e imagen cuidada.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero verme más profesional</h3>
+            <span class="recommendation">Corte Premium</span>
+            <p>Para hombres que buscan presencia, control e imagen cuidada.</p>
           </article>
 
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need2Title">Quiero verme bien para una salida, reunión o evento</h3>
-            <span class="recommendation" data-i18n="need2Service">Corte Premium o Paquete</span>
-            <p data-i18n="need2Text">Para quienes quieren salir con más estilo, confianza y buena presencia.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero verme bien para una salida, reunión o evento</h3>
+            <span class="recommendation">Corte Premium o Paquete</span>
+            <p>Para quienes quieren salir con más estilo, confianza y buena presencia.</p>
           </article>
 
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need3Title">Quiero detalle, técnica y acabado limpio</h3>
-            <span class="recommendation" data-i18n="need3Service">Corte Premium</span>
-            <p data-i18n="need3Text">Para quienes valoran precisión, simetría y un resultado bien trabajado.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero detalle, técnica y acabado limpio</h3>
+            <span class="recommendation">Corte Premium</span>
+            <p>Para quienes valoran precisión, simetría y un resultado bien trabajado.</p>
           </article>
 
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need4Title">Quiero algo fácil, cómodo y confiable</h3>
-            <span class="recommendation" data-i18n="need4Service">Corte Regular</span>
-            <p data-i18n="need4Text">Para quienes quieren verse bien sin complicarse.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero algo fácil, cómodo y confiable</h3>
+            <span class="recommendation">Corte Regular</span>
+            <p>Para quienes quieren verse bien sin complicarse.</p>
           </article>
 
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need5Title">Quiero renovar rostro y descansar</h3>
-            <span class="recommendation" data-i18n="need5Service">Facial Premium</span>
-            <p data-i18n="need5Text">Para quienes buscan relajación, cuidado facial e imagen renovada.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero renovar rostro y descansar</h3>
+            <span class="recommendation">Facial Premium</span>
+            <p>Para quienes buscan relajación, cuidado facial e imagen renovada.</p>
           </article>
 
           <article class="card need-card">
-            <span class="need-label" data-i18n="needLabel">Necesidad</span>
-            <h3 data-i18n="need6Title">Quiero barba definida y ritual clásico</h3>
-            <span class="recommendation" data-i18n="need6Service">Afeitado Tradicional</span>
-            <p data-i18n="need6Text">Para quienes valoran el ritual, la técnica y la presencia masculina.</p>
+            <span class="need-label">Necesidad</span>
+            <h3>Quiero barba definida y ritual clásico</h3>
+            <span class="recommendation">Afeitado Tradicional</span>
+            <p>Para quienes valoran el ritual, la técnica y la presencia masculina.</p>
           </article>
         </div>
       </div>
@@ -1723,30 +1728,30 @@
     <section class="section" id="experiencia" aria-labelledby="ritual-title">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow" data-i18n="ritualEyebrow">Experiencia</span>
-          <h2 id="ritual-title" data-i18n="ritualTitle">El ritual Buenos Muchachos</h2>
-          <p data-i18n="ritualText">No se trata solo de cortar cabello. Se trata de llegar, relajarte, recibir atención personalizada y salir con una imagen más cuidada.</p>
+          <span class="eyebrow">Experiencia</span>
+          <h2 id="ritual-title">El ritual Buenos Muchachos</h2>
+          <p>No se trata solo de cortar cabello. Se trata de llegar, relajarte, recibir atención personalizada y salir con una imagen más cuidada.</p>
         </div>
 
         <div class="grid grid-4 steps">
           <article class="card step-card">
-            <h3 data-i18n="step1Title">Llegas a la barbería.</h3>
-            <p data-i18n="step1Text">Te recibimos en un ambiente masculino, sobrio y cómodo.</p>
+            <h3>Llegas a la barbería.</h3>
+            <p>Te recibimos en un ambiente masculino, sobrio y cómodo.</p>
           </article>
 
           <article class="card step-card">
-            <h3 data-i18n="step2Title">Elegimos el servicio adecuado.</h3>
-            <p data-i18n="step2Text">Definimos si necesitas corte, barba, facial o una experiencia completa.</p>
+            <h3>Elegimos el servicio adecuado.</h3>
+            <p>Definimos si necesitas corte, barba, facial o una experiencia completa.</p>
           </article>
 
           <article class="card step-card">
-            <h3 data-i18n="step3Title">Cuidamos corte, barba o facial con detalle.</h3>
-            <p data-i18n="step3Text">Trabajamos técnica, limpieza, precisión y acabado profesional.</p>
+            <h3>Cuidamos corte, barba o facial con detalle.</h3>
+            <p>Trabajamos técnica, limpieza, precisión y acabado profesional.</p>
           </article>
 
           <article class="card step-card">
-            <h3 data-i18n="step4Title">Sales listo para verte y sentirte mejor.</h3>
-            <p data-i18n="step4Text">Tu imagen queda limpia, cuidada y lista para lo que sigue.</p>
+            <h3>Sales listo para verte y sentirte mejor.</h3>
+            <p>Tu imagen queda limpia, cuidada y lista para lo que sigue.</p>
           </article>
         </div>
       </div>
@@ -1755,73 +1760,81 @@
     <section class="section" id="barberos" aria-labelledby="barbers-title">
       <div class="container">
         <div class="section-header center">
-          <span class="eyebrow" data-i18n="barbersEyebrow">Equipo</span>
-          <h2 id="barbers-title" data-i18n="barbersTitle">Conoce a nuestros barberos</h2>
-          <p data-i18n="barbersSubtitle">Detrás de cada corte hay técnica, atención y criterio. Nuestro equipo combina experiencia, trato cercano y cuidado por el detalle para que cada cliente salga con una imagen más limpia, segura y profesional.</p>
+          <span class="eyebrow">Equipo</span>
+          <h2 id="barbers-title">Conoce a nuestros barberos</h2>
+          <p>Detrás de cada corte hay técnica, atención y criterio. Nuestro equipo combina experiencia, trato cercano y cuidado por el detalle para que cada cliente salga con una imagen más limpia, segura y profesional.</p>
         </div>
 
         <div class="grid grid-4">
           <article class="card">
             <!-- Reemplazar por foto real del barbero -->
-            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero"><span data-i18n="barberPhoto">Foto del barbero</span></div>
-            <h3 data-i18n="barberName">Nombre del barbero</h3>
-            <div class="barber-meta">
-              <span><strong data-i18n="barberRoleLabel">Rol:</strong> <span data-i18n="barber1Role">Barbero / Corte masculino</span></span>
-              <span><strong data-i18n="barberSpecialtyLabel">Especialidad:</strong> <span data-i18n="barber1Specialty">Cortes clásicos, degradados limpios y acabado profesional.</span></span>
-              <span><strong data-i18n="barberFocusLabel">Enfoque:</strong> <span data-i18n="barber1Focus">Ideal para quien busca una imagen precisa, limpia y confiable.</span></span>
+            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero">
+              <span>Foto del barbero</span>
             </div>
-            <p class="quote" data-i18n="barber1Quote">“Un buen corte debe verse bien al salir y seguir viéndose bien después.”</p>
+            <h3>Nombre del barbero</h3>
+            <div class="barber-meta">
+              <span><strong>Rol:</strong> Barbero / Corte masculino</span>
+              <span><strong>Especialidad:</strong> Cortes clásicos, degradados limpios y acabado profesional.</span>
+              <span><strong>Enfoque:</strong> Ideal para quien busca una imagen precisa, limpia y confiable.</span>
+            </div>
+            <p class="quote">“Un buen corte debe verse bien al salir y seguir viéndose bien después.”</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar cita con barbero">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="bookAppointment">Reservar cita</span>
+              <span>Reservar cita</span>
             </a>
           </article>
 
           <article class="card">
             <!-- Reemplazar por foto real del barbero -->
-            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero"><span data-i18n="barberPhoto">Foto del barbero</span></div>
-            <h3 data-i18n="barberName">Nombre del barbero</h3>
-            <div class="barber-meta">
-              <span><strong data-i18n="barberRoleLabel">Rol:</strong> <span data-i18n="barber2Role">Barbero / Barba y afeitado</span></span>
-              <span><strong data-i18n="barberSpecialtyLabel">Especialidad:</strong> <span data-i18n="barber2Specialty">Afeitado tradicional, barba definida y ritual clásico de barbería.</span></span>
-              <span><strong data-i18n="barberFocusLabel">Enfoque:</strong> <span data-i18n="barber2Focus">Ideal para quien busca una experiencia más relajada, cuidada y completa.</span></span>
+            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero">
+              <span>Foto del barbero</span>
             </div>
-            <p class="quote" data-i18n="barber2Quote">“El afeitado tradicional no es solo técnica; también es pausa, cuidado y presencia.”</p>
+            <h3>Nombre del barbero</h3>
+            <div class="barber-meta">
+              <span><strong>Rol:</strong> Barbero / Barba y afeitado</span>
+              <span><strong>Especialidad:</strong> Afeitado tradicional, barba definida y ritual clásico de barbería.</span>
+              <span><strong>Enfoque:</strong> Ideal para quien busca una experiencia más relajada, cuidada y completa.</span>
+            </div>
+            <p class="quote">“El afeitado tradicional no es solo técnica; también es pausa, cuidado y presencia.”</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar cita con barbero">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="bookAppointment">Reservar cita</span>
+              <span>Reservar cita</span>
             </a>
           </article>
 
           <article class="card">
             <!-- Reemplazar por foto real del barbero -->
-            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero"><span data-i18n="barberPhoto">Foto del barbero</span></div>
-            <h3 data-i18n="barberName">Nombre del barbero</h3>
-            <div class="barber-meta">
-              <span><strong data-i18n="barberRoleLabel">Rol:</strong> <span data-i18n="barber3Role">Barbero / Experiencia premium</span></span>
-              <span><strong data-i18n="barberSpecialtyLabel">Especialidad:</strong> <span data-i18n="barber3Specialty">Corte, barba, facial y paquetes de cuidado masculino.</span></span>
-              <span><strong data-i18n="barberFocusLabel">Enfoque:</strong> <span data-i18n="barber3Focus">Ideal para quien quiere renovar su imagen con una experiencia completa.</span></span>
+            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero">
+              <span>Foto del barbero</span>
             </div>
-            <p class="quote" data-i18n="barber3Quote">“La diferencia está en cuidar los detalles que otros pasan por alto.”</p>
+            <h3>Nombre del barbero</h3>
+            <div class="barber-meta">
+              <span><strong>Rol:</strong> Barbero / Experiencia premium</span>
+              <span><strong>Especialidad:</strong> Corte, barba, facial y paquetes de cuidado masculino.</span>
+              <span><strong>Enfoque:</strong> Ideal para quien quiere renovar su imagen con una experiencia completa.</span>
+            </div>
+            <p class="quote">“La diferencia está en cuidar los detalles que otros pasan por alto.”</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar cita con barbero">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="bookAppointment">Reservar cita</span>
+              <span>Reservar cita</span>
             </a>
           </article>
 
           <article class="card">
             <!-- Reemplazar por foto real del barbero -->
-            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero"><span data-i18n="barberPhoto">Foto del barbero</span></div>
-            <h3 data-i18n="barberName">Nombre del barbero</h3>
-            <div class="barber-meta">
-              <span><strong data-i18n="barberRoleLabel">Rol:</strong> <span data-i18n="barber4Role">Barbero / Estilo y mantenimiento</span></span>
-              <span><strong data-i18n="barberSpecialtyLabel">Especialidad:</strong> <span data-i18n="barber4Specialty">Cortes de mantenimiento, asesoría de estilo y acabado natural.</span></span>
-              <span><strong data-i18n="barberFocusLabel">Enfoque:</strong> <span data-i18n="barber4Focus">Ideal para quien quiere verse bien de forma constante sin complicarse.</span></span>
+            <div class="barber-photo" role="img" aria-label="Foto placeholder del barbero">
+              <span>Foto del barbero</span>
             </div>
-            <p class="quote" data-i18n="barber4Quote">“Un buen servicio también consiste en entender lo que el cliente necesita.”</p>
+            <h3>Nombre del barbero</h3>
+            <div class="barber-meta">
+              <span><strong>Rol:</strong> Barbero / Estilo y mantenimiento</span>
+              <span><strong>Especialidad:</strong> Cortes de mantenimiento, asesoría de estilo y acabado natural.</span>
+              <span><strong>Enfoque:</strong> Ideal para quien quiere verse bien de forma constante sin complicarse.</span>
+            </div>
+            <p class="quote">“Un buen servicio también consiste en entender lo que el cliente necesita.”</p>
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar cita con barbero">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="bookAppointment">Reservar cita</span>
+              <span>Reservar cita</span>
             </a>
           </article>
         </div>
@@ -1831,9 +1844,9 @@
     <section class="section" id="resenas" aria-labelledby="reviews-title">
       <div class="container">
         <div class="section-header center">
-          <span class="eyebrow" data-i18n="reviewsEyebrow">Prueba social</span>
-          <h2 id="reviews-title" data-i18n="reviewsTitle">Opiniones reales de nuestros clientes</h2>
-          <p data-i18n="reviewsSubtitle">La mejor prueba de una barbería está en la experiencia de quienes ya nos visitaron. Aquí puedes colocar reseñas reales de Google de clientes locales y visitantes de San Miguel de Allende.</p>
+          <span class="eyebrow">Prueba social</span>
+          <h2 id="reviews-title">Opiniones reales de nuestros clientes</h2>
+          <p>La mejor prueba de una barbería está en la experiencia de quienes ya nos visitaron. Aquí puedes colocar reseñas reales de Google de clientes locales y visitantes de San Miguel de Allende.</p>
         </div>
 
         <!-- 
@@ -1852,10 +1865,10 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
             </div>
-            <p data-i18n="reviewPlaceholder">Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
+            <p>Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
             <div class="review-footer">
-              <span data-i18n="reviewName">Nombre o iniciales</span>
-              <span class="google-tag" data-i18n="reviewTag">Reseña de Google</span>
+              <span>Nombre o iniciales</span>
+              <span class="google-tag">Reseña de Google</span>
             </div>
           </article>
 
@@ -1868,10 +1881,10 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
             </div>
-            <p data-i18n="reviewPlaceholder">Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
+            <p>Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
             <div class="review-footer">
-              <span data-i18n="reviewName">Nombre o iniciales</span>
-              <span class="google-tag" data-i18n="reviewTag">Reseña de Google</span>
+              <span>Nombre o iniciales</span>
+              <span class="google-tag">Reseña de Google</span>
             </div>
           </article>
 
@@ -1884,10 +1897,10 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
             </div>
-            <p data-i18n="reviewPlaceholder">Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
+            <p>Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
             <div class="review-footer">
-              <span data-i18n="reviewName">Nombre o iniciales</span>
-              <span class="google-tag" data-i18n="reviewTag">Reseña de Google</span>
+              <span>Nombre o iniciales</span>
+              <span class="google-tag">Reseña de Google</span>
             </div>
           </article>
 
@@ -1900,17 +1913,17 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6L12 17.1l-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9L12 2Z"/></svg>
             </div>
-            <p data-i18n="reviewPlaceholder">Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
+            <p>Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.</p>
             <div class="review-footer">
-              <span data-i18n="reviewName">Nombre o iniciales</span>
-              <span class="google-tag" data-i18n="reviewTag">Reseña de Google</span>
+              <span>Nombre o iniciales</span>
+              <span class="google-tag">Reseña de Google</span>
             </div>
           </article>
         </div>
 
         <div style="margin-top: 28px; text-align: center;">
           <!-- Reemplazar este enlace por el link directo real de reseñas de Google Business Profile -->
-          <a class="btn btn-secondary" href="https://www.google.com/search?q=Buenos+Muchachos+Barberias+SMA+San+Miguel+de+Allende" target="_blank" rel="noopener" data-i18n="seeGoogleReviews">Ver más reseñas en Google</a>
+          <a class="btn btn-secondary" href="https://www.google.com/search?q=Buenos+Muchachos+Barberias+SMA+San+Miguel+de+Allende" target="_blank" rel="noopener">Ver más reseñas en Google</a>
         </div>
       </div>
     </section>
@@ -1918,24 +1931,24 @@
     <section class="section" id="galeria" aria-labelledby="gallery-title">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow" data-i18n="galleryEyebrow">Galería</span>
-          <h2 id="gallery-title" data-i18n="galleryTitle">Resultados, ritual y ambiente.</h2>
-          <p data-i18n="gallerySubtitle">Usa esta sección para mostrar cortes terminados, afeitados, faciales, herramientas y el ambiente real de la barbería.</p>
+          <span class="eyebrow">Galería</span>
+          <h2 id="gallery-title">Resultados, ritual y ambiente.</h2>
+          <p>Usa esta sección para mostrar cortes terminados, afeitados, faciales, herramientas y el ambiente real de la barbería.</p>
         </div>
 
         <div class="gallery-grid">
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder corte terminado"><span data-i18n="gallery1">Corte terminado</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder corte terminado"><span>Corte terminado</span></div>
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder afeitado tradicional"><span data-i18n="gallery2">Afeitado tradicional</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder afeitado tradicional"><span>Afeitado tradicional</span></div>
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder facial masculino"><span data-i18n="gallery3">Facial masculino</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder facial masculino"><span>Facial masculino</span></div>
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder interior de la barbería"><span data-i18n="gallery4">Interior de la barbería</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder interior de la barbería"><span>Interior de la barbería</span></div>
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder detalle de herramientas"><span data-i18n="gallery5">Detalle de herramientas</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder detalle de herramientas"><span>Detalle de herramientas</span></div>
           <!-- Reemplazar por imagen real -->
-          <div class="gallery-item" role="img" aria-label="Placeholder antes y después"><span data-i18n="gallery6">Antes y después</span></div>
+          <div class="gallery-item" role="img" aria-label="Placeholder antes y después"><span>Antes y después</span></div>
         </div>
       </div>
     </section>
@@ -1943,9 +1956,9 @@
     <section class="section" id="ubicacion" aria-labelledby="location-title">
       <div class="container location-grid">
         <div class="panel card">
-          <span class="eyebrow" data-i18n="locationEyebrow">Ubicación</span>
-          <h2 id="location-title" data-i18n="locationTitle">Barbería premium en Zona Centro, San Miguel de Allende.</h2>
-          <p data-i18n="locationText">Estamos ubicados en una zona céntrica y accesible de San Miguel de Allende. Reserva tu horario antes de llegar para asegurar disponibilidad.</p>
+          <span class="eyebrow">Ubicación</span>
+          <h2 id="location-title">Barbería premium en Zona Centro, San Miguel de Allende.</h2>
+          <p>Estamos ubicados en una zona céntrica y accesible de San Miguel de Allende. Reserva tu horario antes de llegar para asegurar disponibilidad.</p>
 
           <ul class="info-list" aria-label="Datos de ubicación">
             <li>
@@ -1954,7 +1967,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="hoursFull">Lunes a sábado: 9:00 a.m. a 7:00 p.m. Domingo: 9:00 a.m. a 3:00 p.m.</span>
+              <span>Lunes a sábado: 9:00 a.m. a 7:00 p.m. Domingo: 9:00 a.m. a 3:00 p.m.</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M6.6 10.8c1.44 2.83 3.76 5.13 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.25 1.02l-2.22 2.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
@@ -1967,11 +1980,11 @@
           </ul>
 
           <div class="location-actions">
-            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Calz.%20de%20La%20Aurora%2011A%2C%20Zona%20Centro%2C%2037700%20San%20Miguel%20de%20Allende%2C%20Gto." target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps" data-i18n="viewMaps">Ver en Google Maps</a>
+            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Calz.%20de%20La%20Aurora%2011A%2C%20Zona%20Centro%2C%2037700%20San%20Miguel%20de%20Allende%2C%20Gto." target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps">Ver en Google Maps</a>
 
             <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar ahora">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span data-i18n="reserveNow">Reservar ahora</span>
+              <span>Reservar ahora</span>
             </a>
 
             <a class="btn btn-whatsapp" href="https://wa.me/524152168988?text=Hola%20Buenos%20Muchachos%2C%20quiero%20informaci%C3%B3n%20para%20reservar%20una%20cita." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
@@ -1997,73 +2010,73 @@
       <div class="container">
         <div class="section-header center">
           <span class="eyebrow">FAQ</span>
-          <h2 id="faq-title" data-i18n="faqTitle">Preguntas frecuentes</h2>
-          <p data-i18n="faqSubtitle">Información rápida para reservar con claridad y elegir mejor tu servicio.</p>
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+          <p>Información rápida para reservar con claridad y elegir mejor tu servicio.</p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq1Q">¿Dónde está Buenos Muchachos Barberías SMA?</span>
+              <span>¿Dónde está Buenos Muchachos Barberías SMA?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq1A">Está en Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.</div>
+            <div class="faq-answer">Está en Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq2Q">¿Necesito reservar cita?</span>
+              <span>¿Necesito reservar cita?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq2A">Sí, se recomienda reservar en línea para asegurar tu horario y que tu servicio quede registrado correctamente.</div>
+            <div class="faq-answer">Sí, se recomienda reservar en línea para asegurar tu horario y que tu servicio quede registrado correctamente.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq3Q">¿Qué servicio me recomiendan si es mi primera vez?</span>
+              <span>¿Qué servicio me recomiendan si es mi primera vez?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq3A">Si quieres una experiencia completa, el Corte Premium es la mejor entrada. Si deseas barba, facial o más cuidado, elige un paquete.</div>
+            <div class="faq-answer">Si quieres una experiencia completa, el Corte Premium es la mejor entrada. Si deseas barba, facial o más cuidado, elige un paquete.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq4Q">¿Ofrecen afeitado tradicional?</span>
+              <span>¿Ofrecen afeitado tradicional?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq4A">Sí. El Afeitado Tradicional incluye navaja, espuma caliente, toallas calientes, aromaterapia y masaje.</div>
+            <div class="faq-answer">Sí. El Afeitado Tradicional incluye navaja, espuma caliente, toallas calientes, aromaterapia y masaje.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq5Q">¿Tienen facial masculino?</span>
+              <span>¿Tienen facial masculino?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq5A">Sí. El Facial Premium incluye limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.</div>
+            <div class="faq-answer">Sí. El Facial Premium incluye limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq6Q">¿Atienden turistas?</span>
+              <span>¿Atienden turistas?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq6A">Sí. Atendemos clientes locales y visitantes que buscan una experiencia de barbería premium en San Miguel de Allende.</div>
+            <div class="faq-answer">Sí. Atendemos clientes locales y visitantes que buscan una experiencia de barbería premium en San Miguel de Allende.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq7Q">¿Dónde puedo reservar?</span>
+              <span>¿Dónde puedo reservar?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq7A">Puedes reservar directamente en https://www.buenosmuchachossma.com/appointments.</div>
+            <div class="faq-answer">Puedes reservar directamente en https://www.buenosmuchachossma.com/appointments.</div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-question">
-              <span data-i18n="faq8Q">¿Qué diferencia a Buenos Muchachos de una barbería común?</span>
+              <span>¿Qué diferencia a Buenos Muchachos de una barbería común?</span>
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </summary>
-            <div class="faq-answer" data-i18n="faq8A">La combinación de técnica profesional, trato cercano, ambiente masculino y una experiencia cuidada de principio a fin.</div>
+            <div class="faq-answer">La combinación de técnica profesional, trato cercano, ambiente masculino y una experiencia cuidada de principio a fin.</div>
           </details>
         </div>
       </div>
@@ -2072,12 +2085,12 @@
     <section class="section compact" aria-labelledby="final-title">
       <div class="container">
         <div class="final-cta">
-          <span class="eyebrow" data-i18n="finalEyebrow">Reserva en línea</span>
-          <h2 id="final-title" data-i18n="finalTitle">Tu próxima cita ya puede quedar reservada.</h2>
-          <p class="lead" data-i18n="finalText">Elige tu servicio, aparta tu horario y vive la experiencia Buenos Muchachos.</p>
+          <span class="eyebrow">Reserva en línea</span>
+          <h2 id="final-title">Tu próxima cita ya puede quedar reservada.</h2>
+          <p class="lead">Elige tu servicio, aparta tu horario y vive la experiencia Buenos Muchachos.</p>
           <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar ahora">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="reserveNow">Reservar ahora</span>
+            <span>Reservar ahora</span>
           </a>
         </div>
       </div>
@@ -2089,39 +2102,39 @@
       <div class="footer-grid">
         <div>
           <div class="footer-title">Buenos Muchachos Barberías SMA</div>
-          <p data-i18n="footerDescription">Buenos Muchachos Barberías SMA — Barbería premium en San Miguel de Allende.</p>
+          <p>Buenos Muchachos Barberías SMA — Barbería premium en San Miguel de Allende.</p>
           <a class="btn btn-primary" href="https://www.buenosmuchachossma.com/appointments" aria-label="Reservar cita">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="bookAppointment">Reservar cita</span>
+            <span>Reservar cita</span>
           </a>
         </div>
 
         <div>
-          <div class="footer-title" data-i18n="footerContact">Contacto</div>
+          <div class="footer-title">Contacto</div>
           <div class="footer-links">
             <span>Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Gto.</span>
             <a href="tel:+524152168988">+52 415 216 8988</a>
             <a href="mailto:buenosmuchachos.ofi@gmail.com">buenosmuchachos.ofi@gmail.com</a>
-            <span data-i18n="hoursFull">Lunes a sábado: 9:00 a.m. a 7:00 p.m. Domingo: 9:00 a.m. a 3:00 p.m.</span>
+            <span>Lunes a sábado: 9:00 a.m. a 7:00 p.m. Domingo: 9:00 a.m. a 3:00 p.m.</span>
           </div>
         </div>
 
         <div>
-          <div class="footer-title" data-i18n="footerLinks">Secciones</div>
+          <div class="footer-title">Secciones</div>
           <div class="footer-links">
-            <a href="#servicios" data-i18n="navServices">Servicios</a>
-            <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
-            <a href="#barberos" data-i18n="navBarbers">Barberos</a>
-            <a href="#resenas" data-i18n="navReviews">Reseñas</a>
-            <a href="#ubicacion" data-i18n="navLocation">Ubicación</a>
-            <a href="#faq" data-i18n="navFaq">FAQ</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#barberos">Barberos</a>
+            <a href="#resenas">Reseñas</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#faq">FAQ</a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© <span id="currentYear"></span> Buenos Muchachos Barberías SMA. </span>
-        <span data-i18n="footerBottom">Barbería premium en San Miguel de Allende.</span>
+        <span>Barbería premium en San Miguel de Allende.</span>
       </div>
     </div>
   </footer>
@@ -2132,7 +2145,7 @@
         <path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         <path d="M8 13h3M8 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <span data-i18n="floatingBook">Reservar cita</span>
+      <span>Reservar cita</span>
     </a>
 
     <a class="btn float-whatsapp" href="https://wa.me/524152168988?text=Hola%20Buenos%20Muchachos%2C%20quiero%20informaci%C3%B3n%20para%20reservar%20una%20cita." aria-label="Enviar mensaje por WhatsApp" target="_blank" rel="noopener">
@@ -2144,412 +2157,20 @@
   </div>
 
   <script>
-    const translations = {
-      es: {
-        skip: "Saltar al contenido principal",
-        navServices: "Servicios",
-        navExperience: "Experiencia",
-        navBarbers: "Barberos",
-        navReviews: "Reseñas",
-        navLocation: "Ubicación",
-        navFaq: "FAQ",
-        reserveNow: "Reservar ahora",
-        heroEyebrow: "Barbería premium en San Miguel de Allende",
-        heroTitle: "Barbería premium en San Miguel de Allende para hombres que cuidan su imagen.",
-        heroSubtitle: "Corte premium, afeitado tradicional, facial masculino y paquetes de cuidado personal en una experiencia cálida, precisa y profesional.",
-        heroCta: "Reservar mi cita ahora",
-        heroWhatsapp: "Tengo una duda por WhatsApp",
-        heroMicrocopy: "Reserva en línea en menos de 1 minuto.",
-        heroImagePlaceholder: "Reemplazar por fotografía real de corte, barbería o ritual masculino",
-        heroBadgeTitle: "Tu imagen no se improvisa.",
-        heroBadgeText: "Reserva tu horario y llega listo.",
-        statServices: "servicios principales",
-        statLocation: "San Miguel de Allende",
-        statPrices: "rango de servicios MXN",
-        localEyebrow: "Autoridad local",
-        localTitle: "Una barbería premium en el corazón de San Miguel de Allende.",
-        localText: "Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro. Somos un espacio de cuidado masculino creado por barberos sanmiguelenses para hombres que valoran imagen, presencia, técnica y experiencia.",
-        localImagePlaceholder: "Imagen local / fachada / interior",
-        hoursShort: "Lunes a sábado 9:00 a.m. – 7:00 p.m. | Domingo 9:00 a.m. – 3:00 p.m.",
-        aiTitleEs: "¿Qué es Buenos Muchachos Barberías SMA?",
-        aiTextEs: "Buenos Muchachos Barberías SMA es una barbería premium ubicada en Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. Ofrece corte premium, corte regular, corte infantil, afeitado tradicional, afeitado express, facial premium y paquetes de cuidado masculino. Su propuesta combina técnica profesional, ambiente masculino, atención cercana y una experiencia de barbería cuidada para clientes locales y visitantes.",
-        aiTitleEn: "What is Buenos Muchachos Barberías SMA?",
-        aiTextEn: "Buenos Muchachos Barberías SMA is a premium barbershop located at Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. It offers premium haircuts, regular haircuts, kids haircuts, traditional shaves, express shaves, premium men’s facials and grooming packages. Its proposal combines professional technique, a masculine atmosphere, personal attention and a refined barbershop experience for locals and visitors.",
-        benefitsEyebrow: "Beneficios",
-        benefitsTitle: "Más que un corte. Una experiencia completa.",
-        benefitsSubtitle: "Cada servicio está diseñado para cuidar tu imagen, tu presencia y tu experiencia desde que llegas hasta que sales.",
-        benefit1Title: "Imagen limpia, cuidada y profesional.",
-        benefit1Text: "Servicios pensados para hombres que quieren verse bien con intención y consistencia.",
-        benefit2Title: "Técnica de barbería con atención al detalle.",
-        benefit2Text: "La diferencia está en el acabado, la limpieza del servicio y la precisión del resultado.",
-        benefit3Title: "Corte, barba, facial y paquetes en un solo lugar.",
-        benefit3Text: "Elige un servicio puntual o una experiencia completa de cuidado masculino.",
-        benefit4Title: "Ambiente masculino, elegante y relajado.",
-        benefit4Text: "Una experiencia cálida, sobria y profesional, sin presión ni saturación.",
-        benefit5Title: "Reserva en línea para asegurar tu horario.",
-        benefit5Text: "Agenda fácil, llega a tiempo y permite que tu servicio quede registrado correctamente.",
-        benefit6Title: "Ubicación céntrica en San Miguel de Allende.",
-        benefit6Text: "Estamos en Zona Centro, cerca de la vida local, hoteles, galerías y recorridos del corazón de San Miguel.",
-        servicesEyebrow: "Servicios",
-        servicesTitle: "Servicios de barbería premium.",
-        servicesSubtitle: "Elige tu servicio y reserva directamente en línea para asegurar tu horario.",
-        service1Name: "Corte Premium",
-        service1Desc: "Ritual de corte masculino con lavado, masaje y acabado de alta precisión.",
-        service1Benefit: "Beneficio: presencia más cuidada, acabado preciso y experiencia completa.",
-        service2Name: "Corte Regular",
-        service2Desc: "Corte clásico con técnica profesional y terminación impecable.",
-        service2Benefit: "Beneficio: verte bien de forma práctica, confiable y sin complicaciones.",
-        service3Name: "Corte Infantil",
-        service3Desc: "Corte para niños con trato cuidadoso, paciente y profesional.",
-        service3Benefit: "Beneficio: una experiencia tranquila, amable y bien cuidada para niños.",
-        service4Name: "Afeitado Tradicional",
-        service4Desc: "Ritual de afeitado con navaja, espuma caliente, toallas calientes, aromaterapia y masaje.",
-        service4Benefit: "Beneficio: barba limpia, piel cuidada y ritual clásico de barbería.",
-        service5Name: "Afeitado Express",
-        service5Desc: "Servicio práctico para limpieza y definición de barba con acabado profesional.",
-        service5Benefit: "Beneficio: barba definida, presentación limpia y servicio eficiente.",
-        service6Name: "Facial Premium",
-        service6Desc: "Limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.",
-        service6Benefit: "Beneficio: rostro renovado, descanso y cuidado masculino completo.",
-        service7Name: "Paquetes",
-        service7Desc: "Paquetes Tradicional, Express y Premium para una experiencia más completa.",
-        service7Benefit: "Beneficio: combina corte, barba, facial o ritual según lo que necesitas hoy.",
-        reserveService: "Reservar servicio",
-        needsEyebrow: "Elige mejor",
-        needsTitle: "Elige según lo que necesitas hoy",
-        needsSubtitle: "Agenda fácil. Llega. Relájate. Sal bien.",
-        needLabel: "Necesidad",
-        need1Title: "Quiero verme más profesional",
-        need1Service: "Corte Premium",
-        need1Text: "Para hombres que buscan presencia, control e imagen cuidada.",
-        need2Title: "Quiero verme bien para una salida, reunión o evento",
-        need2Service: "Corte Premium o Paquete",
-        need2Text: "Para quienes quieren salir con más estilo, confianza y buena presencia.",
-        need3Title: "Quiero detalle, técnica y acabado limpio",
-        need3Service: "Corte Premium",
-        need3Text: "Para quienes valoran precisión, simetría y un resultado bien trabajado.",
-        need4Title: "Quiero algo fácil, cómodo y confiable",
-        need4Service: "Corte Regular",
-        need4Text: "Para quienes quieren verse bien sin complicarse.",
-        need5Title: "Quiero renovar rostro y descansar",
-        need5Service: "Facial Premium",
-        need5Text: "Para quienes buscan relajación, cuidado facial e imagen renovada.",
-        need6Title: "Quiero barba definida y ritual clásico",
-        need6Service: "Afeitado Tradicional",
-        need6Text: "Para quienes valoran el ritual, la técnica y la presencia masculina.",
-        ritualEyebrow: "Experiencia",
-        ritualTitle: "El ritual Buenos Muchachos",
-        ritualText: "No se trata solo de cortar cabello. Se trata de llegar, relajarte, recibir atención personalizada y salir con una imagen más cuidada.",
-        step1Title: "Llegas a la barbería.",
-        step1Text: "Te recibimos en un ambiente masculino, sobrio y cómodo.",
-        step2Title: "Elegimos el servicio adecuado.",
-        step2Text: "Definimos si necesitas corte, barba, facial o una experiencia completa.",
-        step3Title: "Cuidamos corte, barba o facial con detalle.",
-        step3Text: "Trabajamos técnica, limpieza, precisión y acabado profesional.",
-        step4Title: "Sales listo para verte y sentirte mejor.",
-        step4Text: "Tu imagen queda limpia, cuidada y lista para lo que sigue.",
-        barbersEyebrow: "Equipo",
-        barbersTitle: "Conoce a nuestros barberos",
-        barbersSubtitle: "Detrás de cada corte hay técnica, atención y criterio. Nuestro equipo combina experiencia, trato cercano y cuidado por el detalle para que cada cliente salga con una imagen más limpia, segura y profesional.",
-        barberPhoto: "Foto del barbero",
-        barberName: "Nombre del barbero",
-        barberRoleLabel: "Rol:",
-        barberSpecialtyLabel: "Especialidad:",
-        barberFocusLabel: "Enfoque:",
-        barber1Role: "Barbero / Corte masculino",
-        barber1Specialty: "Cortes clásicos, degradados limpios y acabado profesional.",
-        barber1Focus: "Ideal para quien busca una imagen precisa, limpia y confiable.",
-        barber1Quote: "“Un buen corte debe verse bien al salir y seguir viéndose bien después.”",
-        barber2Role: "Barbero / Barba y afeitado",
-        barber2Specialty: "Afeitado tradicional, barba definida y ritual clásico de barbería.",
-        barber2Focus: "Ideal para quien busca una experiencia más relajada, cuidada y completa.",
-        barber2Quote: "“El afeitado tradicional no es solo técnica; también es pausa, cuidado y presencia.”",
-        barber3Role: "Barbero / Experiencia premium",
-        barber3Specialty: "Corte, barba, facial y paquetes de cuidado masculino.",
-        barber3Focus: "Ideal para quien quiere renovar su imagen con una experiencia completa.",
-        barber3Quote: "“La diferencia está en cuidar los detalles que otros pasan por alto.”",
-        barber4Role: "Barbero / Estilo y mantenimiento",
-        barber4Specialty: "Cortes de mantenimiento, asesoría de estilo y acabado natural.",
-        barber4Focus: "Ideal para quien quiere verse bien de forma constante sin complicarse.",
-        barber4Quote: "“Un buen servicio también consiste en entender lo que el cliente necesita.”",
-        bookAppointment: "Reservar cita",
-        reviewsEyebrow: "Prueba social",
-        reviewsTitle: "Opiniones reales de nuestros clientes",
-        reviewsSubtitle: "La mejor prueba de una barbería está en la experiencia de quienes ya nos visitaron. Aquí puedes colocar reseñas reales de Google de clientes locales y visitantes de San Miguel de Allende.",
-        reviewPlaceholder: "Texto editable de reseña real de Google. No colocar reseñas falsas; reemplazar por opinión auténtica del perfil de Google Business.",
-        reviewName: "Nombre o iniciales",
-        reviewTag: "Reseña de Google",
-        seeGoogleReviews: "Ver más reseñas en Google",
-        galleryEyebrow: "Galería",
-        galleryTitle: "Resultados, ritual y ambiente.",
-        gallerySubtitle: "Usa esta sección para mostrar cortes terminados, afeitados, faciales, herramientas y el ambiente real de la barbería.",
-        gallery1: "Corte terminado",
-        gallery2: "Afeitado tradicional",
-        gallery3: "Facial masculino",
-        gallery4: "Interior de la barbería",
-        gallery5: "Detalle de herramientas",
-        gallery6: "Antes y después",
-        locationEyebrow: "Ubicación",
-        locationTitle: "Barbería premium en Zona Centro, San Miguel de Allende.",
-        locationText: "Estamos ubicados en una zona céntrica y accesible de San Miguel de Allende. Reserva tu horario antes de llegar para asegurar disponibilidad.",
-        hoursFull: "Lunes a sábado: 9:00 a.m. a 7:00 p.m. Domingo: 9:00 a.m. a 3:00 p.m.",
-        viewMaps: "Ver en Google Maps",
-        faqTitle: "Preguntas frecuentes",
-        faqSubtitle: "Información rápida para reservar con claridad y elegir mejor tu servicio.",
-        faq1Q: "¿Dónde está Buenos Muchachos Barberías SMA?",
-        faq1A: "Está en Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.",
-        faq2Q: "¿Necesito reservar cita?",
-        faq2A: "Sí, se recomienda reservar en línea para asegurar tu horario y que tu servicio quede registrado correctamente.",
-        faq3Q: "¿Qué servicio me recomiendan si es mi primera vez?",
-        faq3A: "Si quieres una experiencia completa, el Corte Premium es la mejor entrada. Si deseas barba, facial o más cuidado, elige un paquete.",
-        faq4Q: "¿Ofrecen afeitado tradicional?",
-        faq4A: "Sí. El Afeitado Tradicional incluye navaja, espuma caliente, toallas calientes, aromaterapia y masaje.",
-        faq5Q: "¿Tienen facial masculino?",
-        faq5A: "Sí. El Facial Premium incluye limpieza profunda, vaporización, exfoliación, aromaterapia y masaje facial relajante.",
-        faq6Q: "¿Atienden turistas?",
-        faq6A: "Sí. Atendemos clientes locales y visitantes que buscan una experiencia de barbería premium en San Miguel de Allende.",
-        faq7Q: "¿Dónde puedo reservar?",
-        faq7A: "Puedes reservar directamente en https://www.buenosmuchachossma.com/appointments.",
-        faq8Q: "¿Qué diferencia a Buenos Muchachos de una barbería común?",
-        faq8A: "La combinación de técnica profesional, trato cercano, ambiente masculino y una experiencia cuidada de principio a fin.",
-        finalEyebrow: "Reserva en línea",
-        finalTitle: "Tu próxima cita ya puede quedar reservada.",
-        finalText: "Elige tu servicio, aparta tu horario y vive la experiencia Buenos Muchachos.",
-        footerDescription: "Buenos Muchachos Barberías SMA — Barbería premium en San Miguel de Allende.",
-        footerContact: "Contacto",
-        footerLinks: "Secciones",
-        footerBottom: "Barbería premium en San Miguel de Allende.",
-        floatingBook: "Reservar cita"
-      },
-      en: {
-        skip: "Skip to main content",
-        navServices: "Services",
-        navExperience: "Experience",
-        navBarbers: "Barbers",
-        navReviews: "Reviews",
-        navLocation: "Location",
-        navFaq: "FAQ",
-        reserveNow: "Book now",
-        heroEyebrow: "Premium barbershop in San Miguel de Allende",
-        heroTitle: "Premium barbershop in San Miguel de Allende for men who care about their image.",
-        heroSubtitle: "Premium haircuts, traditional shaves, men’s facials and grooming packages in a warm, precise and professional experience.",
-        heroCta: "Book my appointment now",
-        heroWhatsapp: "I have a question on WhatsApp",
-        heroMicrocopy: "Book online in less than 1 minute.",
-        heroImagePlaceholder: "Replace with a real photo of a haircut, barbershop or men’s grooming ritual",
-        heroBadgeTitle: "Your image is not improvised.",
-        heroBadgeText: "Book your time and arrive ready.",
-        statServices: "main services",
-        statLocation: "San Miguel de Allende",
-        statPrices: "service range MXN",
-        localEyebrow: "Local authority",
-        localTitle: "A premium barbershop in the heart of San Miguel de Allende.",
-        localText: "Buenos Muchachos Barberías SMA is a premium barbershop located at Calz. de La Aurora 11A, Zona Centro. We are a men’s grooming space created by local barbers for men who value image, presence, technique and experience.",
-        localImagePlaceholder: "Local image / facade / interior",
-        hoursShort: "Monday to Saturday 9:00 a.m. – 7:00 p.m. | Sunday 9:00 a.m. – 3:00 p.m.",
-        aiTitleEs: "What is Buenos Muchachos Barberías SMA?",
-        aiTextEs: "Buenos Muchachos Barberías SMA is a premium barbershop located at Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. It offers premium haircuts, regular haircuts, kids haircuts, traditional shaves, express shaves, premium men’s facials and grooming packages. Its proposal combines professional technique, a masculine atmosphere, personal attention and a refined barbershop experience for locals and visitors.",
-        aiTitleEn: "What is Buenos Muchachos Barberías SMA?",
-        aiTextEn: "Buenos Muchachos Barberías SMA is a premium barbershop located at Calz. de La Aurora 11A, Zona Centro, San Miguel de Allende, Guanajuato. It offers premium haircuts, regular haircuts, kids haircuts, traditional shaves, express shaves, premium men’s facials and grooming packages. Its proposal combines professional technique, a masculine atmosphere, personal attention and a refined barbershop experience for locals and visitors.",
-        benefitsEyebrow: "Benefits",
-        benefitsTitle: "More than a haircut. A complete experience.",
-        benefitsSubtitle: "Each service is designed to care for your image, your presence and your experience from arrival to finish.",
-        benefit1Title: "Clean, polished and professional image.",
-        benefit1Text: "Services designed for men who want to look good with intention and consistency.",
-        benefit2Title: "Barbering technique with attention to detail.",
-        benefit2Text: "The difference is in the finish, the cleanliness of the service and the precision of the result.",
-        benefit3Title: "Haircut, beard, facial and packages in one place.",
-        benefit3Text: "Choose a focused service or a complete men’s grooming experience.",
-        benefit4Title: "Masculine, elegant and relaxed atmosphere.",
-        benefit4Text: "A warm, sober and professional experience without pressure or noise.",
-        benefit5Title: "Online booking to secure your time.",
-        benefit5Text: "Book easily, arrive on time and make sure your service is properly registered.",
-        benefit6Title: "Central location in San Miguel de Allende.",
-        benefit6Text: "We are in Zona Centro, close to local life, hotels, galleries and the heart of San Miguel.",
-        servicesEyebrow: "Services",
-        servicesTitle: "Premium barbershop services.",
-        servicesSubtitle: "Choose your service and book directly online to secure your time.",
-        service1Name: "Premium Haircut",
-        service1Desc: "Men’s haircut ritual with wash, massage and high-precision finish.",
-        service1Benefit: "Benefit: a more polished presence, precise finish and complete experience.",
-        service2Name: "Regular Haircut",
-        service2Desc: "Classic haircut with professional technique and impeccable finish.",
-        service2Benefit: "Benefit: look good in a practical, reliable and easy way.",
-        service3Name: "Kids Haircut",
-        service3Desc: "Haircut for children with careful, patient and professional attention.",
-        service3Benefit: "Benefit: a calm, kind and well-cared-for experience for kids.",
-        service4Name: "Traditional Shave",
-        service4Desc: "Shaving ritual with razor, hot foam, hot towels, aromatherapy and massage.",
-        service4Benefit: "Benefit: clean beard, cared-for skin and a classic barbershop ritual.",
-        service5Name: "Express Shave",
-        service5Desc: "Practical service for beard cleanup and definition with a professional finish.",
-        service5Benefit: "Benefit: defined beard, clean presentation and efficient service.",
-        service6Name: "Premium Facial",
-        service6Desc: "Deep cleansing, steaming, exfoliation, aromatherapy and relaxing facial massage.",
-        service6Benefit: "Benefit: refreshed face, rest and complete men’s grooming care.",
-        service7Name: "Packages",
-        service7Desc: "Traditional, Express and Premium packages for a more complete experience.",
-        service7Benefit: "Benefit: combine haircut, beard, facial or ritual depending on what you need today.",
-        reserveService: "Book service",
-        needsEyebrow: "Choose better",
-        needsTitle: "Choose based on what you need today",
-        needsSubtitle: "Book easily. Arrive. Relax. Leave looking sharp.",
-        needLabel: "Need",
-        need1Title: "I want to look more professional",
-        need1Service: "Premium Haircut",
-        need1Text: "For men looking for presence, control and a well-groomed image.",
-        need2Title: "I want to look good for a night out, meeting or event",
-        need2Service: "Premium Haircut or Package",
-        need2Text: "For those who want to leave with more style, confidence and presence.",
-        need3Title: "I want detail, technique and a clean finish",
-        need3Service: "Premium Haircut",
-        need3Text: "For those who value precision, symmetry and a well-crafted result.",
-        need4Title: "I want something easy, comfortable and reliable",
-        need4Service: "Regular Haircut",
-        need4Text: "For those who want to look good without complications.",
-        need5Title: "I want to refresh my face and rest",
-        need5Service: "Premium Facial",
-        need5Text: "For those looking for relaxation, facial care and a refreshed image.",
-        need6Title: "I want a defined beard and classic ritual",
-        need6Service: "Traditional Shave",
-        need6Text: "For those who value ritual, technique and masculine presence.",
-        ritualEyebrow: "Experience",
-        ritualTitle: "The Buenos Muchachos ritual",
-        ritualText: "It is not just about cutting hair. It is about arriving, relaxing, receiving personal attention and leaving with a more polished image.",
-        step1Title: "You arrive at the barbershop.",
-        step1Text: "We welcome you in a masculine, sober and comfortable atmosphere.",
-        step2Title: "We choose the right service.",
-        step2Text: "We define whether you need a haircut, beard service, facial or complete experience.",
-        step3Title: "We care for haircut, beard or facial in detail.",
-        step3Text: "We work on technique, cleanliness, precision and professional finish.",
-        step4Title: "You leave ready to look and feel better.",
-        step4Text: "Your image is clean, polished and ready for what comes next.",
-        barbersEyebrow: "Team",
-        barbersTitle: "Meet our barbers",
-        barbersSubtitle: "Behind every haircut there is technique, attention and judgment. Our team combines experience, close service and attention to detail so every client leaves with a cleaner, more confident and professional image.",
-        barberPhoto: "Barber photo",
-        barberName: "Barber name",
-        barberRoleLabel: "Role:",
-        barberSpecialtyLabel: "Specialty:",
-        barberFocusLabel: "Focus:",
-        barber1Role: "Barber / Men’s haircut",
-        barber1Specialty: "Classic cuts, clean fades and professional finish.",
-        barber1Focus: "Ideal for those looking for a precise, clean and reliable image.",
-        barber1Quote: "“A good haircut should look good when you leave and keep looking good afterward.”",
-        barber2Role: "Barber / Beard and shave",
-        barber2Specialty: "Traditional shave, defined beard and classic barbershop ritual.",
-        barber2Focus: "Ideal for those looking for a more relaxed, cared-for and complete experience.",
-        barber2Quote: "“A traditional shave is not only technique; it is also pause, care and presence.”",
-        barber3Role: "Barber / Premium experience",
-        barber3Specialty: "Haircut, beard, facial and men’s grooming packages.",
-        barber3Focus: "Ideal for those who want to refresh their image with a complete experience.",
-        barber3Quote: "“The difference is in caring for the details others overlook.”",
-        barber4Role: "Barber / Style and maintenance",
-        barber4Specialty: "Maintenance cuts, style guidance and natural finish.",
-        barber4Focus: "Ideal for those who want to look good consistently without complications.",
-        barber4Quote: "“Good service also means understanding what the client needs.”",
-        bookAppointment: "Book appointment",
-        reviewsEyebrow: "Social proof",
-        reviewsTitle: "Real opinions from our clients",
-        reviewsSubtitle: "The best proof of a barbershop is the experience of those who have already visited us. Here you can place real Google reviews from local clients and visitors to San Miguel de Allende.",
-        reviewPlaceholder: "Editable real Google review text. Do not add fake reviews; replace with an authentic opinion from the Google Business Profile.",
-        reviewName: "Name or initials",
-        reviewTag: "Google review",
-        seeGoogleReviews: "See more reviews on Google",
-        galleryEyebrow: "Gallery",
-        galleryTitle: "Results, ritual and atmosphere.",
-        gallerySubtitle: "Use this section to show finished haircuts, shaves, facials, tools and the real atmosphere of the barbershop.",
-        gallery1: "Finished haircut",
-        gallery2: "Traditional shave",
-        gallery3: "Men’s facial",
-        gallery4: "Barbershop interior",
-        gallery5: "Tool detail",
-        gallery6: "Before and after",
-        locationEyebrow: "Location",
-        locationTitle: "Premium barbershop in Zona Centro, San Miguel de Allende.",
-        locationText: "We are located in a central and accessible area of San Miguel de Allende. Book your time before arriving to secure availability.",
-        hoursFull: "Monday to Saturday: 9:00 a.m. to 7:00 p.m. Sunday: 9:00 a.m. to 3:00 p.m.",
-        viewMaps: "View on Google Maps",
-        faqTitle: "Frequently asked questions",
-        faqSubtitle: "Quick information to book clearly and choose your service better.",
-        faq1Q: "Where is Buenos Muchachos Barberías SMA located?",
-        faq1A: "It is located at Calz. de La Aurora 11A, Zona Centro, 37700 San Miguel de Allende, Guanajuato.",
-        faq2Q: "Do I need to book an appointment?",
-        faq2A: "Yes, online booking is recommended to secure your time and make sure your service is properly registered.",
-        faq3Q: "What service do you recommend for my first visit?",
-        faq3A: "If you want a complete experience, the Premium Haircut is the best entry point. If you want beard, facial or more care, choose a package.",
-        faq4Q: "Do you offer traditional shaving?",
-        faq4A: "Yes. The Traditional Shave includes razor, hot foam, hot towels, aromatherapy and massage.",
-        faq5Q: "Do you offer men’s facial services?",
-        faq5A: "Yes. The Premium Facial includes deep cleansing, steaming, exfoliation, aromatherapy and relaxing facial massage.",
-        faq6Q: "Do you serve tourists?",
-        faq6A: "Yes. We serve local clients and visitors looking for a premium barbershop experience in San Miguel de Allende.",
-        faq7Q: "Where can I book?",
-        faq7A: "You can book directly at https://www.buenosmuchachossma.com/appointments.",
-        faq8Q: "What makes Buenos Muchachos different from a regular barbershop?",
-        faq8A: "The combination of professional technique, close service, masculine atmosphere and a refined experience from start to finish.",
-        finalEyebrow: "Online booking",
-        finalTitle: "Your next appointment can be booked now.",
-        finalText: "Choose your service, reserve your time and experience Buenos Muchachos.",
-        footerDescription: "Buenos Muchachos Barberías SMA — Premium barbershop in San Miguel de Allende.",
-        footerContact: "Contact",
-        footerLinks: "Sections",
-        footerBottom: "Premium barbershop in San Miguel de Allende.",
-        floatingBook: "Book appointment"
-      }
-    };
-
-    const languageToggle = document.getElementById("languageToggle");
-    const languageLabel = document.getElementById("languageLabel");
     const menuToggle = document.getElementById("menuToggle");
     const mainNav = document.getElementById("mainNav");
     const currentYear = document.getElementById("currentYear");
 
-    let currentLanguage = localStorage.getItem("bm-language") || "es";
-
-    function applyLanguage(language) {
-      document.documentElement.lang = language === "es" ? "es-MX" : "en";
-
-      document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        if (translations[language][key]) {
-          element.textContent = translations[language][key];
-        }
-      });
-
-      languageLabel.textContent = language === "es" ? "ES / EN" : "EN / ES";
-      languageToggle.setAttribute(
-        "aria-label",
-        language === "es" ? "Cambiar idioma a inglés" : "Switch language to Spanish"
-      );
-
-      document.title = language === "es"
-        ? "Buenos Muchachos Barberías SMA | Barbería Premium en San Miguel de Allende"
-        : "Buenos Muchachos Barberías SMA | Premium Barbershop in San Miguel de Allende";
-
-      localStorage.setItem("bm-language", language);
-    }
-
     function closeMenu() {
       document.body.classList.remove("menu-open");
       menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", currentLanguage === "es" ? "Abrir menú" : "Open menu");
+      menuToggle.setAttribute("aria-label", "Abrir menú");
     }
-
-    languageToggle.addEventListener("click", () => {
-      currentLanguage = currentLanguage === "es" ? "en" : "es";
-      applyLanguage(currentLanguage);
-    });
 
     menuToggle.addEventListener("click", () => {
       const isOpen = document.body.classList.toggle("menu-open");
       menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen
-          ? (currentLanguage === "es" ? "Cerrar menú" : "Close menu")
-          : (currentLanguage === "es" ? "Abrir menú" : "Open menu")
-      );
+      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
     });
 
     mainNav.querySelectorAll("a").forEach((link) => {
@@ -2574,7 +2195,6 @@
     });
 
     currentYear.textContent = new Date().getFullYear();
-    applyLanguage(currentLanguage);
   </script>
 </body>
 </html>
