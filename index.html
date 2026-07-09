@@ -42,7 +42,6 @@
       --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
       --radius-lg: 28px;
       --radius-md: 20px;
-      --radius-sm: 14px;
       --max: 1180px;
       --header-height: 82px;
     }
@@ -203,37 +202,11 @@
       min-width: fit-content;
     }
 
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(200, 164, 93, 0.7);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      background: linear-gradient(145deg, rgba(200, 164, 93, 0.12), rgba(245, 241, 232, 0.03));
-      box-shadow: 0 0 0 7px rgba(200, 164, 93, 0.04);
-      font-weight: 700;
-      letter-spacing: -0.08em;
-    }
-
-    .brand-copy {
-      display: grid;
-      line-height: 1.1;
-    }
-
-    .brand-name {
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .brand-sub {
-      font-size: 0.74rem;
-      color: var(--gray);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .brand-logo {
+      width: 158px;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .main-nav {
@@ -610,10 +583,6 @@
     .grid {
       display: grid;
       gap: 20px;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .grid-3 {
@@ -1024,10 +993,6 @@
       height: 25px;
     }
 
-    [hidden] {
-      display: none !important;
-    }
-
     :focus-visible {
       outline: 3px solid rgba(200, 164, 93, 0.7);
       outline-offset: 4px;
@@ -1068,6 +1033,10 @@
         width: min(100% - 28px, var(--max));
       }
 
+      .brand-logo {
+        width: 132px;
+      }
+
       .menu-toggle {
         display: inline-block;
       }
@@ -1101,14 +1070,6 @@
         display: none;
       }
 
-      .brand-name {
-        font-size: 0.9rem;
-      }
-
-      .brand-sub {
-        font-size: 0.68rem;
-      }
-
       .section {
         padding: 72px 0;
       }
@@ -1132,7 +1093,6 @@
       }
 
       .stats-strip,
-      .grid-2,
       .grid-3,
       .gallery-grid,
       .footer-grid {
@@ -1171,13 +1131,8 @@
     }
 
     @media (max-width: 560px) {
-      .brand-mark {
-        width: 40px;
-        height: 40px;
-      }
-
-      .brand-sub {
-        display: none;
+      .brand-logo {
+        width: 118px;
       }
 
       h1 {
@@ -1399,12 +1354,8 @@
   <header class="site-header" aria-label="Navegación principal">
     <div class="container nav-wrap">
       <a class="brand" href="#inicio" aria-label="Buenos Muchachos Barberías SMA">
-        <!-- Reemplazar este bloque textual por logotipo real si se desea -->
-        <span class="brand-mark" aria-hidden="true">BM</span>
-        <span class="brand-copy">
-          <span class="brand-name">Buenos Muchachos</span>
-          <span class="brand-sub">Barberías SMA</span>
-        </span>
+        <!-- LOGO: coloca tu archivo en /assets/logo.png o cambia esta ruta -->
+        <img class="brand-logo" src="assets/logo.png" alt="Buenos Muchachos Barberías SMA" />
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Secciones de la landing page">
@@ -2558,6 +2509,7 @@
 
     function applyLanguage(language) {
       document.documentElement.lang = language === "es" ? "es-MX" : "en";
+
       document.querySelectorAll("[data-i18n]").forEach((element) => {
         const key = element.getAttribute("data-i18n");
         if (translations[language][key]) {
